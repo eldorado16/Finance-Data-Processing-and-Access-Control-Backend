@@ -81,3 +81,9 @@ Thumbs.db
 api test/
 postman/*.postman_environment.local.json
 
+
+# Assignment notes (local only)
+project.md
+specs.md
+task.md
+
