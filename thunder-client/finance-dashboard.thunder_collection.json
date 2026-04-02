@@ -1,0 +1,92 @@
+{
+  "clientName": "Thunder Client",
+  "collectionName": "finance-dashboard-backend",
+  "collectionId": "10f1d21c-6848-4e95-9d52-49b8844dc001",
+  "dateExported": "2026-04-02T08:10:00.000Z",
+  "version": "1.4",
+  "folders": [
+    {
+      "_id": "f-auth",
+      "name": "Auth",
+      "containerId": "",
+      "created": "2026-04-02T08:10:00.000Z",
+      "sortNum": 10000
+    },
+    {
+      "_id": "f-records",
+      "name": "Records",
+      "containerId": "",
+      "created": "2026-04-02T08:10:00.000Z",
+      "sortNum": 20000
+    }
+  ],
+  "requests": [
+    {
+      "_id": "r-health",
+      "colId": "10f1d21c-6848-4e95-9d52-49b8844dc001",
+      "containerId": "",
+      "name": "Health",
+      "url": "http://127.0.0.1:4000/health",
+      "method": "GET",
+      "sortNum": 10000,
+      "created": "2026-04-02T08:10:00.000Z",
+      "modified": "2026-04-02T08:10:00.000Z",
+      "headers": [],
+      "body": {
+        "type": "json",
+        "raw": [""],
+        "form": []
+      }
+    },
+    {
+      "_id": "r-login-admin",
+      "colId": "10f1d21c-6848-4e95-9d52-49b8844dc001",
+      "containerId": "f-auth",
+      "name": "Login Admin",
+      "url": "http://127.0.0.1:4000/api/auth/login",
+      "method": "POST",
+      "sortNum": 10000,
+      "created": "2026-04-02T08:10:00.000Z",
+      "modified": "2026-04-02T08:10:00.000Z",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": [
+          "{",
+          "  \"email\": \"<set-admin-email>\",",
+          "  \"password\": \"<set-admin-password>\"",
+          "}"
+        ],
+        "form": []
+      }
+    },
+    {
+      "_id": "r-get-records",
+      "colId": "10f1d21c-6848-4e95-9d52-49b8844dc001",
+      "containerId": "f-records",
+      "name": "Get Records (Set Token Manually)",
+      "url": "http://127.0.0.1:4000/api/records",
+      "method": "GET",
+      "sortNum": 10000,
+      "created": "2026-04-02T08:10:00.000Z",
+      "modified": "2026-04-02T08:10:00.000Z",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer <PASTE_TOKEN_HERE>"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": [""],
+        "form": []
+      }
+    }
+  ],
+  "ref": "sanitized-share-safe"
+}
